@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contact" id="contact">
+            <center>
+        <h2>Contact</h2>
+    </center>
+    <form onsubmit="sendMassage()"> 
+        <center>
+        <table border="0" cellspacing="0" cellpadding="1">
+            <tr>
+                <td>nama</td> <td><input type="text" id="nama"required></td>
+            </tr>
+            <tr>
+                <td>email</td> <td><input type="text" id="email"required></td>
+            </tr>
+            <tr>
+                <td>pesan</td> <td><textarea type="text" id="pesan"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+        <center>
+                <input type="submit" value="kirim">
+                </center>
+                </td>
+            </tr>
+        </table>
+            </center>
+    </form>
+    </div>
+    </center>
+ 
+
+</div> 
+
+<script>
+    function sendMassage() {
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const pesan = document.getElementById('pesan').value;
+
+      const url = "https://api.whatsapp.com/send?phone=62895403599994&text=Assalamualaikum%20Admin%0ASaya%20*"+ nama +"*%20%0AEmail%20*"+ email +"*%0A%0Apesan%0A*"+ pesan +"*";
+    
+    window.open(url);
+    
+    }
+  </script>
+</body>
+</html>
